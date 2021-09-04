@@ -42,7 +42,7 @@ public class PlayerMove : MonoBehaviour
             float curSpeedX = canMove ? speed * Input.GetAxis("Horizontal") : 0;
             float curSpeedY = canMove ? speed * Input.GetAxis("Vertical") : 0;
 
-            moveDirection = (forward * curSpeedY) + (right * curSpeedX);
+            moveDirection = Vector3.ClampMagnitude((forward * curSpeedY) + (right * curSpeedX), speed);
 
             if (Input.GetButton("Jump") && canMove)
             {
