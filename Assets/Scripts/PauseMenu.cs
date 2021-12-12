@@ -7,12 +7,14 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool IsPause;
     public GameObject pauseMenu;
+    public GameObject settingsMenu;
     public GameObject Crosshair;
 
     // Start is called before the first frame update
     void Start()
     {
         pauseMenu.SetActive(false);
+        settingsMenu.SetActive(false);
     }
 
     // Update is called once per frame
